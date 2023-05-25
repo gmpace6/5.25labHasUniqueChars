@@ -13,17 +13,20 @@
 // hasUniqueChars("Bob")
 // // returns true
 
+let longArr = []
 function hasUniqueChars(string) {
     for(let i = 0; i < string.length; i++) {
         for(let j = i + 1; j < string.length; j++) {
-    if (string[i] === string[j]) {
-        return false
-        }
-    }
+// longArr.push(i, j)
+if (string[i] === string[j]) {
+    return false
+}
+}
 } 
-        return true
+return true
 }
 console.log(hasUniqueChars("Bob"))
 console.log(hasUniqueChars("Monday"))
-console.log(hasUniqueChars("Moonday"))
+console.log(hasUniqueChars("Mondayd"))
+// console.log(longArr)
 console.log(hasUniqueChars("MOonday"))
